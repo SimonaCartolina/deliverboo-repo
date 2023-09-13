@@ -6,33 +6,25 @@ export default {
 
 <template>
   <!--navbar with three main components-->
-  <nav class="d-flex justify-content-between align-items-center py-3 px-4">
+  <nav
+    class="d-flex justify-content-between align-items-center py-3 py-md-1 px-3 px-md-1 px-sm-0"
+  >
     <!--first component:deliveroo logo with class logo-->
-    <div class="logo">
+    <div class="logo col-lg-2 col-md-3 col-sm-3">
       <img
         src="https://logos-world.net/wp-content/uploads/2021/02/Deliveroo-Logo-2016-present.jpg"
         alt=""
       />
     </div>
 
-    <!--second component: the input search-->
-    <div>
+    <!--second component: the INPUT search-->
+    <div
+      class="col-lg-6 col-md-3 col-sm-11 order-lg-1 order-md-1 order-sm-2 my-sm-2"
+    >
       <div class="input-group">
-        <span class="input-group-text">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="1em"
-            viewBox="0 0 512 512"
-            style="fill: #c0c0c0"
-          >
-            <path
-              d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
-            />
-          </svg>
-        </span>
         <input
-          type="text"
-          class="form-control py-3 px-2"
+          type="search"
+          class="form-control px-2 py-2"
           placeholder="Ristoranti,spesa,piatti"
           style="width: 620px; background-color: #f5f5f5; color: #cccdcd"
         />
@@ -41,8 +33,40 @@ export default {
 
     <!--third component:three buttons (carrello,accedi o registrati, account)-->
 
-    <div class="d-flex">
-      <div class="nav-buttons py-2 px-3">
+    <button
+      class="btn btn-primary"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasRight"
+      aria-controls="offcanvasRight"
+    >
+      Toggle right offcanvas
+    </button>
+
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">
+          Offcanvas right
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">...</div>
+    </div>
+
+    <div
+      class="d-flex col-lg-4 col-md-6 col-sm-9 order-lg-2 order-md-2 order-sm-1 my-3"
+    >
+      <div class="nav-buttons py-2 px-3 d-lg-inline-block">
         <a href="" class="d-flex align-items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"

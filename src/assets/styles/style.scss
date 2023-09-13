@@ -8,6 +8,7 @@ body{
 
 }
     nav{
+        flex-wrap:wrap;
         border-bottom:0.30px solid lightgray;
         .logo{
             width:120px;
@@ -40,4 +41,12 @@ body{
             vertical-align: middle;
         }
 
+    }
+
+    @media (max-width: 600px) {
+        .nav-buttons{
+           display:none;
+        }
+
+        
     }
