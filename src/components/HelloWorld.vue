@@ -8,4 +8,4 @@ export default {
   <h1>HELLO WORLD</h1>
 </template>
 
-<style></style>
+<style scoped></style>
