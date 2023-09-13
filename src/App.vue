@@ -20,4 +20,10 @@ export default {
 <style lang="scss">
 @import "./assets/styles/style.scss";
 @import "bootstrap";
+$fa-font-path: "../node_modules/font-awesome/fonts";
+@import "../node_modules/font-awesome/scss/font-awesome";
+.icon-user {
+  @extend .fa;
+  @extend .fa-user;
+}
 </style>

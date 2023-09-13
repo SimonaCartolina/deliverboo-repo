@@ -1,8 +1,21 @@
+$fa-font-path:"../node_modules/font-awesome/fonts";
+@import "../node_modules/font-awesome/scss/font-awesome";
+.icon-user {
+  @extend .fa;
+  @extend .fa-user;
+}
+
+.my-container{
+    width:90%;
+    margin:0 auto;
+}
 body{
     background-color: #FFFFFF;
     color: #2E3333;
+
 }
 nav{
+    border-bottom:0.30px solid lightgray;
     .logo{
         width:120px;
         height:70px;
@@ -19,8 +32,15 @@ nav{
     }
 
     .nav-buttons{
-        border:0.30px solid #2E3333;
-        margin-right:2rem;
+        border:0.30px solid lightgray;
+        margin-right:1rem;
+        border-radius:5px;
+    }
+    .nav-buttons:hover {
+        background-color: #71c3bc; /* Change the background color on hover */
+    }
+    .form-control{
+        width:400px;
     }
 
 }
