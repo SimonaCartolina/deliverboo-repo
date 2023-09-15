@@ -6,7 +6,6 @@ import ShoppingBag from "./components/ShoppingBag.vue";
 export default {
   name: "App",
   components: {
-    
     HeaderApp,
     FooterApp,
     ShoppingBag
@@ -19,9 +18,11 @@ export default {
   <main>
     <ShoppingBag />
   </main>
+  <main></main>
   <FooterApp />
 </template>
 
 <style lang="scss">
 @import "./assets/styles/style.scss";
+@import "bootstrap";
 </style>
