@@ -1,22 +1,23 @@
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
 import HeaderApp from "./components/partials/HeaderApp.vue";
 import FooterApp from "./components/partials/FooterApp.vue";
+import ShoppingBag from "./components/ShoppingBag.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    
     HeaderApp,
     FooterApp,
-  },
+    ShoppingBag
+},
 };
 </script>
 
 <template>
   <HeaderApp />
   <main>
-    <HelloWorld />
+    <ShoppingBag />
   </main>
   <FooterApp />
 </template>
