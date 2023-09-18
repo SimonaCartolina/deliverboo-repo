@@ -1,7 +1,24 @@
 <script>
-    export default {
-        name: "Shooping Bag",
-    };
+export default {
+    name: 'ShoppingBag',
+    data() {
+        return {
+            quantity: 1,
+        }
+    },
+    methods: {
+        increment() {
+            this.quantity++;
+        },
+        decrement() {
+            if(this.quantity >0){
+               this.quantity--; 
+            }
+
+            
+        }
+    },
+}
 </script>
 
 <template lang="">
@@ -16,46 +33,40 @@
                         </div>
                         <div class="description">
                             <h3>Product</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque blanditiis quos magni culpa laboriosam nam minus, nisi officiis impedit quisquam praesentium mollitia eaque quo id sunt omnis ab corporis maxime.</p>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-img me-4">
-                            <img src="https://www.kfc-suisse.ch/fileadmin/media/images/img_mood_bucket_start_v3.jpg" alt="">
-                        </div>
-                        <div class="description">
-                            <h3>Product</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque blanditiis quos magni culpa laboriosam nam minus, nisi officiis impedit quisquam praesentium mollitia eaque quo id sunt omnis ab corporis maxime.</p>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-img me-4">
-                            <img src="https://www.kfc-suisse.ch/fileadmin/media/images/img_mood_bucket_start_v3.jpg" alt="">
-                        </div>
-                        <div class="description">
-                            <h3>Product</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque blanditiis quos magni culpa laboriosam nam minus, nisi officiis impedit quisquam praesentium mollitia eaque quo id sunt omnis ab corporis maxime.</p>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-img me-4">
-                            <img src="https://www.kfc-suisse.ch/fileadmin/media/images/img_mood_bucket_start_v3.jpg" alt="">
-                        </div>
-                        <div class="description">
-                            <h3>Product</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque blanditiis quos magni culpa laboriosam nam minus, nisi officiis impedit quisquam praesentium mollitia eaque quo id sunt omnis ab corporis maxime.</p>
-                        </div>
-                    </article>
-                    <article class="product-card">
-                        <div class="product-img me-4">
-                            <img src="https://www.kfc-suisse.ch/fileadmin/media/images/img_mood_bucket_start_v3.jpg" alt="">
-                        </div>
-                        <div class="description">
-                            <h3>Product</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque blanditiis quos magni culpa laboriosam nam minus, nisi officiis impedit quisquam praesentium mollitia eaque quo id sunt omnis ab corporis maxime.</p>
-                        </div>
-                    </article>
+                            <p class="price">Price</p>      
+                            <p class="available fsz">Disponibilità immediata</p>                     
+                            <p class="fsz">Idoneo alla <strong>Spedizione GRATUITA</strong>.</p>                     
+                            <p><strong>Colore</strong>: Nero</p>
+                            <div class="count d-flex align-items-center">
+                                <div class="me-3">
+                                    <span>Quantità:</span>
+                                </div>
 
+                                <div>
+                                    <select class="num form-select" aria-label="Default select example">                              
+                                  <option selected value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                                  <option value="5">5</option>
+                                  <option value="6">6</option>
+                                  <option value="7">7</option>
+                                  <option value="8">8</option>
+                                  <option value="9">9</option>
+                                  <option value="10">10</option>                    
+                                    </select>
+                            </div>
+                                
+                                <!-- <button @click="decrement" class="minus">-</button> -->
+                                <!-- <span>Count: {{ quantity }}</span> -->
+                                <!-- <input type="number" class="num" :value="quantity"> -->
+                                
+                                <!-- <button @click="increment" class="plus">+</button> -->
+                            </div>
+                     
+                        </div>
+                    </article>
+                    
                                          
                     
                 </div>
@@ -135,16 +146,43 @@
         
         .product-card{
             display: flex;     
-            padding: 2rem 0;           
+            padding: .8rem 0;           
             border-top: 1px solid #00CCBC;
-            border-bottom: 1px solid #00CCBC; 
             .product-img{
-                width: 150px;
+                width: 20%;
+                
                 img{
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
+                    border-radius: 15px;
                 }
+            }
+            .description>*{
+                margin: 0;
+                padding: 0;
+            }
+            .available{
+                color: green;
+            }
+            .price{
+                font-weight: bolder;
+                font-size: 1.2rem;
+            }  
+            .fsz{
+                font-size: 0.8rem;
+            }
+            .count{
+                .num{
+                    width: 100%;
+                }
+                .minus{
+                    margin-right: .6rem;                  
+                }
+                .plus{
+                    margin-left: 0.6rem;
+                }
+
             }
         }
         
