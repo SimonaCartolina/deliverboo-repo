@@ -20,11 +20,10 @@ export default {
 <template>
   <HeaderApp />
 
-  <restaurantsList />
 
   <main>
-    <ShoppingBag />
     <restaurantsList />
+    <ShoppingBag />
   </main>
 
   <FooterApp />
