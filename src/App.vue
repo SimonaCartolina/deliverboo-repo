@@ -6,18 +6,26 @@ import HomePageHeader from "./components/partials/HomePageHeader.vue";
 export default {
   name: "App",
   components: {
-    HomePageHeader,
-},
-};
+    HeaderApp,
+    FooterApp,
+    restaurantsList,
+    ShoppingBag
+  },
+
+}
+
 </script>
 
 <template>
-  <HomePageHeader />
-  
+  <HeaderApp />
+
+
   <main>
-    
+    <restaurantsList />
+    <ShoppingBag />
   </main>
- 
+
+  <FooterApp />
 </template>
 
 <style lang="scss">
