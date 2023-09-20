@@ -1,25 +1,23 @@
 <script>
-import HeaderApp from "./components/partials/HeaderApp.vue";
-import FooterApp from "./components/partials/FooterApp.vue";
-import ShoppingBag from "./components/ShoppingBag.vue";
+import HomePageHeader from "./components/partials/HomePageHeader.vue";
+
+
 
 export default {
   name: "App",
   components: {
-    HeaderApp,
-    FooterApp,
-    ShoppingBag
+    HomePageHeader,
 },
 };
 </script>
 
 <template>
-  <HeaderApp />
+  <HomePageHeader />
+  
   <main>
-    <ShoppingBag />
+    
   </main>
-  <main></main>
-  <FooterApp />
+ 
 </template>
 
 <style lang="scss">
