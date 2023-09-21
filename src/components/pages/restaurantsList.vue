@@ -1,71 +1,71 @@
-<script>
-
-import axios from "axios";
-export default {
-    name: "restaurantsList",
-
-    data() {
-    return {
-        searchBar: '',
-        restaurantsList: [],
-        apiUrl: "http://localhost:8000/api/restaurants",
-        };
-    },
-
     
-
-    methods: {
-        getRestaurants() {
-        axios
-            .get(`${this.apiUrl}`)
-            .then((response) => {
-            console.log(response.data);
-            this.restaurantsList = response.data;
-            })
-            .catch(function (error) {
-            // handle error
-            console.log(error);
-            });
-        },
-
-        newSearch(searchTerm){
-            // console.log(titleToSearch);
-            this.getRestaurants(this.apiUrl, searchTerm);
-        }
-    },
-
-    created() {
-        this.getRestaurants(this.apiUrl);
-
-    },
     
-};
-</script>
+    <template>
+        <div class="col-lg-6 col-md-3 col-sm-11 order-lg-1 order-md-1 order-sm-2 my-sm-2">
+        <div class="input-group">
+            <input v-model="searchBar" @keyup.enter="newSearch(searchTerm)" id="searchBar" type="search" class="form-control px-2 py-2" placeholder="Ristoranti, spesa, piatti" style="width: 620px; background-color: #f5f5f5; color: #cccdcd" />
+            <button @click="newSearch(searchTerm)"> search </button>
 
-<template>
-    <h2>
-        RESTAURANTS:
-    </h2>
 
-    <div class="mycontainer py-5 restaurants">
-      <div v-for="restaurant in restaurantsList" class="singleRestaurant">
-        <div class="card">
-          <h3>{{ restaurant.name }}</h3>
-          <h5>{{ restaurant.address }} </h5>
-          <p>
-            {{ restaurant.opening_time }}
-          </p>
-          <p>
-            {{ restaurant.P_IVA }}
-          </p>
         </div>
-      </div>
-    </div>
-</template>
+        </div>
+        <div class="mycontainer py-5 restaurants d-flex flex-wrap">
+        <div v-for="restaurant in restaurantsList" :key="restaurant.id" class="row mx-4 my-4">
+            <div class="card col-4" style="width: 18rem;">
+            <img :src="restaurant.image" class="card-img-top" alt="">
+            <div class="card-body">
+                <h5 class="card-title">{{ restaurant.name }} </h5>
+                <p class="card-text">{{ restaurant.address }}</p>
+                <p class="card-text">{{ restaurant.opening_time }}</p>
+            </div>
+            </div>
+        </div>
+        </div>
+    </template>
+    
+    <script>
+    import axios from "axios";
+    export default {
+        name: "restaurantsList",
+        data() {
+        return {
+            searchBar: '',
+            restaurantsList: [],
+            apiUrl: "http://localhost:8000/api/restaurants",
+        };
+        },
+            methods: {
+            getRestaurants() {
+                axios
+                .get(this.apiUrl)
+                .then((response) => {
+                    console.log(response.data);
+                    this.restaurantsList = response.data;
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+            },
+            newSearch(searchTerm) {
+                this.apiUrl = `http://localhost:8000/api/restaurants?search=${searchTerm}`;
+                console.log('Api URL:', this.apiUrl);
+                this.getRestaurants();
+                this.restaurantsList = [];
+},
 
-<style scoped>
 
-h2{
-    color:red;
-}
-</style>
+
+    },
+    created() {
+        this.getRestaurants();
+        },
+    };
+    </script>
+    
+
+    <style scoped>
+
+    h2{
+        color:red;
+    }
+    </style>
