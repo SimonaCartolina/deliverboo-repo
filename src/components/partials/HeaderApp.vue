@@ -18,19 +18,7 @@ export default {
     </div>
 
     <!--second component: the INPUT search-->
-    <div
-      class="col-lg-6 col-md-3 col-sm-11 order-lg-1 order-md-1 order-sm-2 my-sm-2"
-    >
-      <div class="input-group">
-        <input v-model="searchBar"  @keyup.enter="newSearch(searchTerm)" id="searchBar"
-          type="search"
-          class="form-control px-2 py-2"
-          placeholder="Ristoranti,spesa,piatti"
-          style="width: 620px; background-color: #f5f5f5; color: #cccdcd"
-        />
-        <button @click="newSearch(searchTerm)">search</button>
-      </div>
-    </div>
+    
 
     <!--third component:three buttons (carrello,accedi o registrati, account)-->
 
