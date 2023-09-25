@@ -18,10 +18,10 @@
                 <p class="card-text">{{ restaurant.address }}</p>
                 <p class="card-text">{{ restaurant.opening_time }}</p>
             </div>
-            <button>
-                <router-link to="/SingleRestaurant">Vedi</router-link>
 
-            </button>
+            
+                <router-link :to="{ name: 'SingleRestaurant' }">Vedi</router-link>
+
             </div>
         </div>
         </div>
