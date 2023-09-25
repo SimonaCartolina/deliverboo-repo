@@ -18,6 +18,10 @@
                 <p class="card-text">{{ restaurant.address }}</p>
                 <p class="card-text">{{ restaurant.opening_time }}</p>
             </div>
+            <button>
+                <router-link to="/SingleRestaurant">Vedi</router-link>
+
+            </button>
             </div>
         </div>
         </div>
@@ -29,6 +33,15 @@
         name: "restaurantsList",
         data() {
         return {
+
+                    links: [
+                                {
+                                route: "/SingleRestaurant",
+                                name: "SingleRestaurant",
+                                }
+                            ],
+
+
             searchBar: '',
             restaurantsList: [],
             apiUrl: "http://localhost:8000/api/restaurants",
