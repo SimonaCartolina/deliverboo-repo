@@ -46,4 +46,10 @@ export default {
   </nav>
 </template>
 
-<style scoped></style>
+<style scoped>
+  @media screen and (max-width: 480px){
+  div.nav-buttons{
+    margin-left: 2rem;
+  }
+  }
+</style>

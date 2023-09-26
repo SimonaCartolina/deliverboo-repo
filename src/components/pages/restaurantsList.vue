@@ -1,7 +1,7 @@
     
     
     <template>
-        <div class="col-lg-6 col-md-3 col-sm-4 order-lg-1 order-md-1 order-sm-2 my-sm-2 d-flex align-items-center pt-2" style="margin-left:21%;">
+        <div class="col-lg-6 col-md-3 col-sm-4 order-lg-1 order-md-1 order-sm-2 my-sm-2 d-flex align-items-center pt-2" style="margin-left:25%;">
             <div class="input-group">
                 <input v-model="searchBar" @keyup.enter="newSearch(searchBar)" id="searchBar" type="search" class="form-control px-2 py-2" placeholder="Ristoranti, spesa, piatti" style="width: 620px; background-color: #F5F5F5; color: #CCCDCD" />
             </div>
@@ -11,7 +11,7 @@
                 </svg>
             </button>
         </div>
-        <div class="mycontainer py-5 restaurants d-flex flex-wrap" style="margin-left:20%;">
+        <div class="mycontainer py-5 ms-5 restaurants d-flex flex-wrap">
             <div v-for="restaurant in restaurantsList" :key="restaurant.id" class=" mx-4 my-4">
                 <div style="width: 250px; border:0.50px solid rgb(221, 218, 218)" class="pb-2">
                     <img :src="restaurant.image"  alt="restaurant.image">
