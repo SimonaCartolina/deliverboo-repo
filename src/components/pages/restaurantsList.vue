@@ -19,6 +19,7 @@
                 <p class="card-text">{{ restaurant.address }}</p>
                 <p class="card-text">{{ restaurant.opening_time }}</p>
             </div>
+<<<<<<< HEAD
             <button>
 
                 <span v-for="link in links">
@@ -26,8 +27,12 @@
                     Vedi Menu
                 </router-link>
                 </span>
+=======
+>>>>>>> 35c4a03e17a1174889cb1bf9e08b1d5420a21cfe
 
-            </button>
+            
+                <router-link :to="{ name: 'SingleRestaurant' }">Vedi</router-link>
+
             </div>
         </div>
         </div>
