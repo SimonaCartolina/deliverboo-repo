@@ -1,52 +1,52 @@
-.my-container{
-    width:90%;
-    margin:0 auto;
+.my-container {
+    width: 90%;
+    margin: 0 auto;
 }
-body{
+
+body {
     background-color: #FFFFFF;
     color: #2E3333;
 
 }
-    nav{
-        flex-wrap:wrap;
-        border-bottom:0.30px solid lightgray;
-        .logo{
-            width:120px;
-            height:70px;
-            img{
-                display:block;
-                width:100%;
-                height:100%;
-            }
-        }
 
-        a{
-            text-decoration:none;
-            color: #2E3333;
-        }
+nav {
+    flex-wrap: wrap;
+    border-bottom: 0.30px solid lightgray;
 
-        .nav-buttons{
-            border:0.30px solid lightgray;
-            margin-right:1rem;
-            border-radius:5px;
-        }
-        .nav-buttons:hover {
-            background-color: #67dcd2f7; /* Change the background color on hover */
-        }
-        .form-control{
-            width:400px;
-        }
-        svg{
-            margin-right:0.30rem;
-            vertical-align: middle;
-        }
+    .logo {
+        width: 120px;
+        height: 70px;
 
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
     }
 
-    @media (max-width: 600px) {
-        .nav-buttons{
-           display:none;
-        }
-
-        
+    a {
+        text-decoration: none;
+        color: #2E3333;
     }
+
+    .nav-buttons {
+        border: 0.30px solid lightgray;
+        margin-right: 1rem;
+        border-radius: 5px;
+    }
+
+    .nav-buttons:hover {
+        background-color: #67dcd2f7;
+        /* Change the background color on hover */
+    }
+
+    .form-control {
+        width: 400px;
+    }
+
+    svg {
+        margin-right: 0.30rem;
+        vertical-align: middle;
+    }
+
+}
