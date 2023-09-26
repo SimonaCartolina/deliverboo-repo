@@ -7,11 +7,12 @@ export default {
 <template>
 
   <div class="SingleRestaurant">
-      <h1>
-        single restaurant
-      </h1>
 
+    <h1>
+      SINGLE RESTAURANT
+    </h1>
   </div>
+
 </template>
 
 
