@@ -98,7 +98,7 @@
     }
 
     @media screen and (max-width: 480px){
-        div.row mx-4 my-4{
+        div.container{
             margin-left: 5rem;
         }
     }
