@@ -19,7 +19,6 @@
                 <p class="card-text">{{ restaurant.address }}</p>
                 <p class="card-text">{{ restaurant.opening_time }}</p>
             </div>
-<<<<<<< HEAD
             <button>
 
                 <span v-for="link in links">
@@ -27,12 +26,10 @@
                     Vedi Menu
                 </router-link>
                 </span>
-=======
->>>>>>> 35c4a03e17a1174889cb1bf9e08b1d5420a21cfe
 
             
                 <router-link :to="{ name: 'SingleRestaurant' }">Vedi</router-link>
-
+            </button>
             </div>
         </div>
         </div>
@@ -98,5 +95,11 @@
 
     h2{
         color:red;
+    }
+
+    @media screen and (max-width: 480px){
+        div.row mx-4 my-4{
+            margin-left: 5rem;
+        }
     }
     </style>
