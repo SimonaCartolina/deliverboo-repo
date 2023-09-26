@@ -1,7 +1,7 @@
     
     
     <template>
-        <div class="col-lg-6 col-md-3 col-sm-11 order-lg-1 order-md-1 order-sm-2 my-sm-2 d-flex align-items-center pt-2" style="margin-left:21%;">
+        <div class="col-lg-6 col-md-3 col-sm-4 order-lg-1 order-md-1 order-sm-2 my-sm-2 d-flex align-items-center pt-2" style="margin-left:21%;">
         <div class="input-group">
             <input v-model="searchBar" @keyup.enter="newSearch(searchBar)" id="searchBar" type="search" class="form-control px-2 py-2" placeholder="Ristoranti, spesa, piatti" style="width: 620px; background-color: #f5f5f5; color: #cccdcd" />
         </div>
