@@ -11,6 +11,7 @@
         </div>
         <div class="mycontainer py-5 restaurants d-flex flex-wrap">
         <div v-for="restaurant in restaurantsList" :key="restaurant.id" class="row mx-4 my-4">
+
             <div class="card col-4" style="width: 18rem;">
             <img :src="restaurant.image" class="card-img-top" alt="">
             <div class="card-body">
@@ -19,7 +20,12 @@
                 <p class="card-text">{{ restaurant.opening_time }}</p>
             </div>
             <button>
-                <router-link to="/SingleRestaurant">Vedi</router-link>
+
+                <span v-for="link in links">
+                <router-link :to="{ name: link.route }">
+                    Vedi Menu
+                </router-link>
+                </span>
 
             </button>
             </div>
@@ -36,7 +42,7 @@
 
                     links: [
                                 {
-                                route: "/SingleRestaurant",
+                                route: "SingleRestaurant",
                                 name: "SingleRestaurant",
                                 }
                             ],
