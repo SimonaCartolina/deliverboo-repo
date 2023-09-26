@@ -14,13 +14,13 @@
             <div class="card col-4" style="width: 18rem;">
             <img :src="restaurant.image" class="card-img-top" alt="">
             <div class="card-body">
-                <h5 class="card-title">{{ restaurant.name }} </h5>
+                <h5 class="card-title"> {{ restaurant.name }} </h5>
                 <p class="card-text">{{ restaurant.address }}</p>
                 <p class="card-text">{{ restaurant.opening_time }}</p>
             </div>
 
             
-                <router-link :to="{ name: 'SingleRestaurant' }">Vedi</router-link>
+                <router-link :to="{ name: 'SingleRestaurant' }"> Vedi</router-link>
 
             </div>
         </div>
