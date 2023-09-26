@@ -18,6 +18,8 @@ export default {
     </div>
 
     <!--second component: the INPUT search-->
+
+    
     
 
     <!--third component:three buttons (carrello,accedi o registrati, account)-->
