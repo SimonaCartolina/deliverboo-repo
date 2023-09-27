@@ -11,10 +11,13 @@ export default {
   >
     <!--first component:deliveroo logo with class logo-->
     <div class="logo col-lg-10 col-md-3 col-sm-3">
-      <img
+      <a href="http://127.0.0.1:8000/admin/home">
+        <img
         src="https://logos-world.net/wp-content/uploads/2021/02/Deliveroo-Logo-2016-present.jpg"
         alt=""
       />
+      </a>
+      
     </div>
 
     <!--second component: the INPUT search-->
