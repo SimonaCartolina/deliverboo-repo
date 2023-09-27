@@ -152,5 +152,25 @@
                 font-size: 1.2rem;
                 margin: 0;
             }
+}
+
+@media (max-width: 768px) {
+    .bg-footer .container {
+        flex-wrap: wrap;
+      .column{
+        width: calc((100% / 2) - 20px);
+        margin-bottom: 1rem;
+    }  
     }
+  
+} 
+@media (max-width: 576px) {
+    .bg-footer .container {
+        justify-content: center;
+       .column{
+        width: 90%
+    }  
+    } 
+  
+}
 </style>
