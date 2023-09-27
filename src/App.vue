@@ -21,9 +21,8 @@ export default {
 <template>
   <HeaderApp />
 
-
+<router-view></router-view>
   <main>
-    <restaurantsList />
     <ShoppingBag />
   </main>
 

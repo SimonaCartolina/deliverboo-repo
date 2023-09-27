@@ -1,5 +1,4 @@
-    
-    
+
     <template>
         <div class="col-lg-6 col-md-3 col-sm-11 order-lg-1 order-md-1 order-sm-2 my-sm-2">
         <div class="input-group">
@@ -36,7 +35,7 @@
 
                     links: [
                                 {
-                                route: "/SingleRestaurant",
+                                route: "SingleRestaurant",
                                 name: "SingleRestaurant",
                                 }
                             ],
@@ -88,4 +87,6 @@
     h2{
         color:red;
     }
+
+
     </style>

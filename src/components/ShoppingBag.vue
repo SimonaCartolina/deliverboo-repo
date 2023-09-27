@@ -3,7 +3,7 @@ export default {
     name: 'ShoppingBag',
     data() {
         return {
-            quantity: 1,
+            quantity: 0.00,
         }
     },
     methods: {
@@ -23,10 +23,10 @@ export default {
 
 <template lang="">
     <div class="background">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row d-flex">
                 <h2 class="p-0 mb-3">Shooping Cart</h2>
-                <div class="left-size col-8">
+                <div class="left-size col-md-8 col-12">
                     <article class="product-card">
                         <div class="product-img me-4">
                             <img src="https://www.kfc-suisse.ch/fileadmin/media/images/img_mood_bucket_start_v3.jpg" alt="">
@@ -66,11 +66,44 @@ export default {
                      
                         </div>
                     </article>
+                    <article class="product-card">
+                        <div class="product-img me-4">
+                            <img src="https://www.kfc-suisse.ch/fileadmin/media/images/img_mood_bucket_start_v3.jpg" alt="">
+                        </div>
+                        <div class="description">
+                            <h3>Product</h3>
+                            <p class="price">Price</p>      
+                            <p class="available fsz">Disponibilità immediata</p>                     
+                            <p class="fsz">Idoneo alla <strong>Spedizione GRATUITA</strong>.</p>                     
+                            <p><strong>Colore</strong>: Nero</p>
+                            <div class="count d-flex align-items-center">
+                                <div class="me-3">
+                                    <span>Quantità:</span>
+                                </div>
+
+                                <div>
+                                    <select class="num form-select" aria-label="Default select example">                              
+                                  <option selected value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                                  <option value="5">5</option>
+                                  <option value="6">6</option>
+                                  <option value="7">7</option>
+                                  <option value="8">8</option>
+                                  <option value="9">9</option>
+                                  <option value="10">10</option>                    
+                                    </select>
+                            </div>
+                            </div>
+                     
+                        </div>
+                    </article>
                     
                                          
                     
                 </div>
-                <div class="right-size col-4">
+                <div class="right-size col-md-4 col-12">
                     <div class="order-summary">
                         <div class="pb-3 fs-3">Order Summary</div>
                         <div class="pb-2 fs-5">Promo Code</div>
@@ -97,19 +130,26 @@ export default {
                                 </ul>
                             </div>
                         </div>
-                        <hr>
+                        <hr>        
+                                
                         <div class="amount-due d-flex justify-content-between">
                             <div>
                                 <ul>
                                     <li class="fs-3">
                                         Amount due
                                     </li>
+                                    <li>Mancia riders</li>
                                 </ul>
                             </div>
                             <div class="fw-bold">
                                 <ul>
                                     <li class="fs-3">
                                         to be calculated
+                                    </li>
+                                    <li class="text-end">
+                                            <span class="minus" @click="decrement">-</span>                                        
+                                            <span class="plus" @click="increment">+</span>
+                                        {{ quantity }}&euro;                                  
                                     </li>
                                 </ul>                           
                             </div>
@@ -149,6 +189,7 @@ export default {
             padding: .8rem 0;           
             border-top: 1px solid #00CCBC;
             .product-img{
+
                 width: 20%;
                 
                 img{
@@ -171,25 +212,12 @@ export default {
             }  
             .fsz{
                 font-size: 0.8rem;
-            }
-            .count{
-                .num{
-                    width: 100%;
-                }
-                .minus{
-                    margin-right: .6rem;                  
-                }
-                .plus{
-                    margin-left: 0.6rem;
-                }
-
+            }    
             }
         }
         
     }
-    .right-size{  
-           
-        padding-left: 2rem;
+    .right-size{ 
         .order-summary{
             border: 1px solid #00CCBC;
             background-color: #fff;
@@ -239,5 +267,36 @@ export default {
         width: 100%;
         border: 1px solid black;
     }
+    .minus,
+    .plus{
+        cursor: pointer;
+        color: #00CCBC;
+        font-size: 1.2rem;
+        font-weight: bolder;
+        padding: 2px 10px;
+        border: 3px solid #00CCBC;
+        margin: 0 2px;                 
+    }
+
+
+@media (max-width: 768px) {
+    .background {
+        padding: 1rem 1rem;
+       .left-size .product-card{
+        .product-img{
+        width: 50%;
+        }
+    }  
+    }
+  
+} 
+@media (max-width: 576px) {
+    .background .left-size .product-card{
+        display: block;
+        .product-img{
+        width: 100%;
+        }
+    } 
+  
 }
 </style>
