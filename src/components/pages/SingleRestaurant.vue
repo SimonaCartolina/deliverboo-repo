@@ -57,22 +57,24 @@ export default {
   </div>
 
   <div class="menu">
+    <h5 class="fw-bolder text-center">
+      OUR MENU:
+    </h5>
 
-    <div v-for="plates in plates">
+    <div v-for="plate in singleRestaurant.restaurant.plates">
       <div class="immagine-profile my-4 col-6">
-                  <img :src="singleRestaurant.restaurant.image" :alt="singleRestaurant.restaurant.id">
+                  <img :src="plate.image" :alt="plate.id">
   
               </div>
   
   
               <div class="container-profile col-4 py-4">
-                  <h5 class="card-title fw-bolder" style="color: #262c2cf7">{{ singleRestaurant.restaurant.name  }}</h5>
+                  <h5 class="card-title fw-bolder" style="color: #262c2cf7">{{ plate['name']  }}</h5>
   
-                  <p class="card-text fw-bold mt-3" style="color:#618B35"> {{ singleRestaurant.restaurant.address  }}</p>
+                  <p class="card-text fw-bold mt-3" style="color:#618B35"> {{ plate.description }}</p>
   
                   <ul class="list-group list-group-flush">
-                      <li class="list-group-item fw-bold" style="color:#618B35">{{ singleRestaurant.restaurant.opening_time  }}</li>
-                      <li class="list-group-item fw-bold" style="color:#618B35">{{ singleRestaurant.restaurant.category }}</li>
+                      <li class="list-group-item fw-bold" style="color:#618B35"> £ {{ plate.price  }}</li>
                   </ul>
                 </div>
   
