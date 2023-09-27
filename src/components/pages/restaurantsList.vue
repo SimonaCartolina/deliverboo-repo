@@ -12,7 +12,8 @@
         <div class="mycontainer py-5 restaurants d-flex flex-wrap">
         <div v-for="restaurant in restaurantsList" :key="restaurant.id" class="row mx-4 my-4">
             <div class="card col-4" style="width: 18rem;">
-            <img :src="restaurant.image" class="card-img-top" alt="">
+                <img v-if="restaurant.image.startsWith('http')" :src="restaurant.image" alt="immagine">
+                <img v-else :src="'http://127.0.0.1:8000/storage/' + restaurant.image" alt="immagine">
             <div class="card-body">
                 <h5 class="card-title">{{ restaurant.name }} </h5>
                 <p class="card-text">{{ restaurant.address }}</p>
@@ -20,7 +21,6 @@
             </div>
             <button>
                 <router-link to="/SingleRestaurant">Vedi</router-link>
-
             </button>
             </div>
         </div>
