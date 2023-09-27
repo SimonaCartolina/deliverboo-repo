@@ -11,7 +11,7 @@
                 </svg>
             </button>
         </div>
-        <div class="mycontainer py-5 ms-5 restaurants d-flex flex-wrap">
+        <div class="mycontainer col-lg-8 col-md-4 col-sm-1  py-5 restaurants d-flex flex-wrap" style="margin-left:21%;">
             <div v-for="restaurant in restaurantsList" :key="restaurant.id" class=" mx-4 my-4">
                 <div style="width: 250px; border:0.50px solid rgb(221, 218, 218)" class="pb-2">
                     <img :src="restaurant.image"  alt="restaurant.image">
@@ -21,7 +21,7 @@
                         <p class="card-text" style="color:rgba(119, 136, 153, 0.793);">{{ restaurant.opening_time }}</p>
                     </div>
                     <router-link :to="{ name: 'SingleRestaurant' }" style="color:black; text-decoration:none;"
-                    class="px-2"> vedi dettagli </router-link>
+                    class="px-2"> <button type="button" class="btn btn-outline-info">Vedi dettagli</button></router-link>
                 </div>
             </div>
         </div>
@@ -89,9 +89,5 @@
         color:red;
     }
 
-    @media screen and (max-width: 480px){
-        div.container{
-            margin-left: 5rem;
-        }
-    }
+
     </style>

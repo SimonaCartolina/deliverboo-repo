@@ -13,7 +13,7 @@ export default {
     <div class="logo col-lg-10 col-md-3 col-sm-3">
       <img
         src="https://logos-world.net/wp-content/uploads/2021/02/Deliveroo-Logo-2016-present.jpg"
-        alt=""
+        alt="logo"
       />
     </div>
 
