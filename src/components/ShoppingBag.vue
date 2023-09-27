@@ -269,7 +269,7 @@ export default {
     }
     .minus,
     .plus{
-        cursor: crosshair;
+        cursor: pointer;
         color: #00CCBC;
         font-size: 1.2rem;
         font-weight: bolder;
