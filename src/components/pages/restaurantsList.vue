@@ -1,29 +1,6 @@
     
     
     <template>
-<<<<<<< HEAD
-        <div class="col-lg-6 col-md-3 col-sm-11 order-lg-1 order-md-1 order-sm-2 my-sm-2">
-        <div class="input-group">
-            <input v-model="searchBar" @keyup.enter="newSearch(searchBar)" id="searchBar" type="search" class="form-control px-2 py-2" placeholder="Ristoranti, spesa, piatti" style="width: 620px; background-color: #f5f5f5; color: #cccdcd" />
-            <button @click="newSearch(searchBar)"> search </button>
-
-
-        </div>
-        </div>
-        <div class="mycontainer py-5 restaurants d-flex flex-wrap">
-        <div v-for="restaurant in restaurantsList" :key="restaurant.id" class="row mx-4 my-4">
-
-            <div class="card col-4" style="width: 18rem;">
-            <img :src="restaurant.image" class="card-img-top" alt="">
-            <div class="card-body">
-                <h5 class="card-title">{{ restaurant.name }} </h5>
-                <p class="card-text">{{ restaurant.address }}</p>
-                <p class="card-text">{{ restaurant.opening_time }}</p>
-            </div>
-            
-                <router-link :to="{ name: 'SingleRestaurant' }">Vedi</router-link>
-
-=======
         <div class="col-lg-6 col-md-3 col-sm-4 order-lg-1 order-md-1 order-sm-2 my-sm-2 d-flex align-items-center pt-2" style="margin-left:21%;">
             <div class="input-group">
                 <input v-model="searchBar" @keyup.enter="newSearch(searchBar)" id="searchBar" type="search" class="form-control px-2 py-2" placeholder="Ristoranti, spesa, piatti" style="width: 620px; background-color: #F5F5F5; color: #CCCDCD" />
@@ -35,7 +12,7 @@
                 </svg>
             </button>
         </div>
-        <div class="mycontainer py-5 restaurants d-flex flex-wrap" style="margin-left:20%;">
+        <div class="mycontainer col-lg-8 col-md-4 col-sm-1  py-5 restaurants d-flex flex-wrap" style="margin-left:21%;">
             <div v-for="restaurant in restaurantsList" :key="restaurant.id" class=" mx-4 my-4">
                 <div style="width: 250px; border:0.50px solid rgb(221, 218, 218)" class="pb-2">
                     <img :src="restaurant.image"  alt="restaurant.image">
@@ -45,7 +22,7 @@
                         <p class="card-text" style="color:rgba(119, 136, 153, 0.793);">{{ restaurant.opening_time }}</p>
                     </div>
                     <router-link :to="{ name: 'SingleRestaurant' }" style="color:black; text-decoration:none;"
-                    class="px-2"> vedi dettagli </router-link>
+                    class="px-2"> <button type="button" class="btn btn-outline-info">Vedi dettagli</button></router-link>
                 </div>
             </div>
         </div>
@@ -113,9 +90,5 @@
         color:red;
     }
 
-    @media screen and (max-width: 480px){
-        div.container{
-            margin-left: 5rem;
-        }
-    }
+
     </style>
