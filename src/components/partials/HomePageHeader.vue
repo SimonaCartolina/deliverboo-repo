@@ -1,19 +1,19 @@
 <script>
 export default {
-  name: "HomePageHeader",
+    name: "HomePageHeader",
 };
 </script>
 
 <template>
     <header>
-      <section class="my_first_section d-flex">
-         <div>
-            <img class="logo"
-                src="https://logos-world.net/wp-content/uploads/2021/02/Deliveroo-Logo-2016-present.jpg"
-                alt=""
-            />
-         </div>
-         <div class="p-2">
+        <section class="my_first_section d-flex">
+            <div>
+                <img class="logo"
+                    src="https://logos-world.net/wp-content/uploads/2021/02/Deliveroo-Logo-2016-present.jpg"
+                    alt=""
+                />
+            </div>
+                <div class="p-2">
             <span class="button my_button">
                 Collabora con Noi
             </span>
@@ -23,10 +23,10 @@ export default {
             <span class="button my_button">
                 Account
             </span>
-         </div>
-      </section>
-      <section class="my_second_section">
-      </section>
+            </div>
+        </section>
+        <section class="my_second_section">
+        </section>
     </header>
 </template>
 

@@ -14,7 +14,7 @@ export default {
       <a href="http://127.0.0.1:8000/admin/home">
         <img
         src="https://logos-world.net/wp-content/uploads/2021/02/Deliveroo-Logo-2016-present.jpg"
-        alt=""
+        alt="logo"
       />
       </a>
       
@@ -49,4 +49,10 @@ export default {
   </nav>
 </template>
 
-<style scoped></style>
+<style scoped>
+  @media screen and (max-width: 480px){
+  div.nav-buttons{
+    margin-left: 2rem;
+  }
+  }
+</style>
