@@ -59,9 +59,9 @@ export default {
 
 <template>
 
-  <div class="SingleRestaurant d-flex m-5">
+  <div class="SingleRestaurant d-flex flex-wrap m-5">
 
-            <div class="immagine-profile my-4 col-6">
+            <div class="immagine-profile col-lg-6 col-md-6 col-sm-12">
 
               <img v-if="singleRestaurant.restaurant.image.startsWith('http')" :src="singleRestaurant.restaurant.image" alt="immagine">
                 <img v-else :src="'http://127.0.0.1:8000/storage/' + singleRestaurant.restaurant.image" alt="immagine">
@@ -70,10 +70,10 @@ export default {
             </div>
 
 
-            <div class="container-profile col-4 py-4">
-                <h5 class="card-title fw-bolder" style="color: #262c2cf7">{{ singleRestaurant.restaurant.name  }}</h5>
+            <div class="container-profile col-lg-3 col-md-3 col-sm-12 py-5">
+                <h2 class="card-title fw-bolder" style="color: #262c2cf7">{{ singleRestaurant.restaurant.name  }}</h2>
 
-                <p class="card-text fw-bold mt-3" style="color:#618B35"> {{ singleRestaurant.restaurant.address  }}</p>
+                <p class="card-text fw-bold mt-3 fs-3" style="color:#618B35"> {{ singleRestaurant.restaurant.address  }}</p>
 
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item fw-bold" style="color:#618B35">{{ singleRestaurant.restaurant.opening_time  }}</li>
@@ -82,10 +82,10 @@ export default {
               </div>
   </div>
 
-  <h5 class="fw-bolder text-center">
+  <h1 class="fw-bolder text-center" style="color:#00CCBC">
     OUR MENU:
-  </h5>
-  <div class="menu d-flex">
+  </h1>
+  <div class="menu d-flex flex-wrap col-12">
 
     <div v-for="plate in singleRestaurant.restaurant.plates" class=" mx-4 my-4">
       <div style="width: 250px; border:1px solid rgba(221, 218, 218, 0.753)" class="plate-card">
@@ -113,4 +113,7 @@ export default {
 </template>
 
 
-<style scoped></style>
+<style scoped>
+
+
+</style>
