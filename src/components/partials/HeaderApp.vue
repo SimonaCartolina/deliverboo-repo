@@ -28,7 +28,7 @@ export default {
     <!--third component:three buttons (carrello,accedi o registrati, account)-->
 
     <div
-      class="d-flex col-lg-2 col-md-6 col-sm-9 order-lg-2 order-md-2 order-sm-1 my-3"
+      class="d-flex col-lg-1 col-md-1 col-sm-1"
     >
       <div class="nav-buttons py-2 px-3 d-lg-inline-block">
         <router-link :to="{name: 'CarrelloApp' }">
@@ -52,9 +52,5 @@ export default {
 </template>
 
 <style scoped>
-  @media screen and (max-width: 480px){
-  div.nav-buttons{
-    margin-left: 2rem;
-  }
-  }
+  
 </style>
