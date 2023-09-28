@@ -85,7 +85,7 @@ export default {
   <h5 class="fw-bolder text-center">
     OUR MENU:
   </h5>
-  <div class="menu d-flex">
+  <div class="menu d-flex flex-wrap col-12">
 
     <div v-for="plate in singleRestaurant.restaurant.plates" class=" mx-4 my-4">
       <div style="width: 250px; border:1px solid rgba(221, 218, 218, 0.753)" class="plate-card">
