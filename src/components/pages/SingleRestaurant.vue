@@ -6,7 +6,9 @@ export default {
   data(){
     return{
       singleRestaurant: [],
-            apiUrl:"",
+      cart: [], 
+      restaurantMenu: [],
+      apiUrl:"",
     }
   },
 
@@ -27,6 +29,27 @@ export default {
           console.log(error);
         });
     },
+
+    addToCart(plate) {
+                        const existingItem = this.cart.find((plate) => plate.id);
+                        if (existingItem) {
+                            existingItem.quantity++; // Aumenta la quantità se il piatto è già nel carrello
+                        } else {
+                            this.cart.push({ plate, quantity: 1 }); // Aggiungi il piatto al carrello
+                        }
+                        },
+
+
+        removeFromCart(plate) {
+            const index = this.cart.findIndex((plate) => plate.id);
+            if (index !== -1) {
+                if (this.cart[index].quantity > 1) {
+                this.cart[index].quantity--; // Diminuisci la quantità se è maggiore di 1
+                } else {
+                this.cart.splice(index, 1); // Rimuovi completamente il piatto dal carrello se la quantità è 1
+                }
+            }
+    }
   },
   created() {
     this.getSingleRestaurant();
@@ -74,12 +97,12 @@ export default {
   
   
               <div class="card-body flex-column px-2">
-                  <h7 style="color:#262c2cf7" class="fw-bolder">{{ plate['name']  }}</h7>
+                  <h6 style="color:#262c2cf7" class="fw-bolder">{{ plate['name']  }}</h6>
   
                   <p class="card-text mb-1" style="color:#4d7c1be2;"> {{ plate.description }}</p>
                   <p class="card-text" style="color:rgba(119, 136, 153, 0.793);"> € {{ plate.price  }}</p>
                 </div>
-                <button style="background-color:#00CCBC; border-radius:25px;" class="px-3 py-1">
+                <button @click="addToCart(plate)" style="background-color:#00CCBC; border-radius:25px;" class="px-3 py-1">
                   Acquista
                 </button>
   
@@ -87,9 +110,6 @@ export default {
     </div>
 
     </div>
-
-
-
 </template>
 
 

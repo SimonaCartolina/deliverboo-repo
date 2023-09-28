@@ -3,7 +3,7 @@
     <template>
         <div class="col-lg-6 col-md-3 col-sm-4 order-lg-1 order-md-1 order-sm-2 my-sm-2 d-flex align-items-center pt-2" style="margin-left:21%;">
             <div class="input-group">
-                <input v-model="searchBar" @keyup.enter="newSearch(searchBar)" id="searchBar" type="search" class="form-control px-2 py-2" placeholder="Ristoranti, spesa, piatti" style="width: 620px; background-color: #F5F5F5; color: #CCCDCD" />
+                <input v-model="searchBar" @keyup.enter="newSearch(searchBar)" id="searchBar" type="search" class="form-control px-2 py-2" placeholder="Cerca un ristorante per categoria" style="width: 620px; background-color: #F5F5F5; color: #CCCDCD" />
             </div>
             <button @click="newSearch(searchBar)" class="py-2">
                 <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
@@ -25,9 +25,10 @@
                 <img v-else :src="'http://127.0.0.1:8000/storage/' + restaurant.image" alt="immagine">
 
             <div class="card-body flex-column px-2">
-                <h7 style="color:#262c2cf7" class="fw-bolder"> {{ restaurant.name }} </h7>
+                <h6 style="color:#262c2cf7" class="fw-bolder"> {{ restaurant.name }} </h6>
                 <p class="card-text mb-1" style="color:#4d7c1be2;">{{ restaurant.address }}</p>
                 <p class="card-text" style="color:rgba(119, 136, 153, 0.793);">{{ restaurant.opening_time }}</p>
+                <p class="card-text" style="color:rgba(34, 35, 35, 0.722);">{{ restaurant.category }}</p>
             </div>
 
 
