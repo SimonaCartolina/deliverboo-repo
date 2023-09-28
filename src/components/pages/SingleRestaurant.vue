@@ -46,7 +46,9 @@ export default {
     },
 
     addToCart(plate) {
-      const existingItem = this.cart.find((item) => item.plate.id === plate.id);
+      const existingItem = this.cart.find((item) => item.plate.id === plate.id)
+      
+      ;
       if (existingItem) {
               existingItem.quantity++;
               console.log(existingItem); // Aumenta la quantità se il piatto è già nel carrello
