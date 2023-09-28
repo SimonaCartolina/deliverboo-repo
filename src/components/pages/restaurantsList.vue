@@ -24,11 +24,11 @@
                 <img v-if="restaurant.image.startsWith('http')" :src="restaurant.image" alt="immagine">
                 <img v-else :src="'http://127.0.0.1:8000/storage/' + restaurant.image" alt="immagine">
 
-            <div class="card-body flex-column px-2">
+            <div class="card-body flex-column px-2 mb-2">
                 <h6 style="color:#262c2cf7" class="fw-bolder"> {{ restaurant.name }} </h6>
                 <p class="card-text mb-1" style="color:#4d7c1be2;">{{ restaurant.address }}</p>
                 <p class="card-text" style="color:rgba(119, 136, 153, 0.793);">{{ restaurant.opening_time }}</p>
-                <p class="card-text" style="color:rgba(34, 35, 35, 0.722);">{{ restaurant.category }}</p>
+                <p class="card-text" style="color:rgba(11, 12, 12, 0.722);">{{ restaurant.category }}</p>
             </div>
 
 

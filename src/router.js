@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import restaurantsList from './components/pages/restaurantsList.vue';
 import SingleRestaurant from './components/pages/SingleRestaurant.vue';
-import CarrelloApp from './components/pages/CarrelloApp.vue'
+import AppPagamenti from './components/pages/AppPagamenti.vue';
 
 
 
@@ -21,9 +21,9 @@ const router = createRouter({
             component: SingleRestaurant,
         },
         {
-            path: '/CarrelloApp',
-            name: 'CarrelloApp',
-            component: CarrelloApp,
+            path: '/AppPagamenti',
+            name: 'AppPagamenti',
+            component: AppPagamenti,
         },
     ]
 })
