@@ -101,6 +101,8 @@ export default {
   
                   <p class="card-text mb-1" style="color:#4d7c1be2;"> {{ plate.description }}</p>
                   <p class="card-text" style="color:rgba(119, 136, 153, 0.793);"> € {{ plate.price  }}</p>
+                  <p v-if="plate.visible == 1">Visibile</p>
+                  <p v-else>Non visibile</p>
                 </div>
                 <button @click="addToCart(plate)" style="background-color:#00CCBC; border-radius:25px;" class="px-3 py-1">
                   Acquista
