@@ -59,9 +59,9 @@ export default {
 
 <template>
 
-  <div class="SingleRestaurant d-flex m-5">
+  <div class="SingleRestaurant d-flex flex-wrap m-5">
 
-            <div class="immagine-profile my-4 col-6">
+            <div class="immagine-profile col-lg-6 col-md-6 col-sm-12">
 
               <img v-if="singleRestaurant.restaurant.image.startsWith('http')" :src="singleRestaurant.restaurant.image" alt="immagine">
                 <img v-else :src="'http://127.0.0.1:8000/storage/' + singleRestaurant.restaurant.image" alt="immagine">
@@ -70,7 +70,7 @@ export default {
             </div>
 
 
-            <div class="container-profile col-4 py-4">
+            <div class="container-profile col-lg-3 col-md-3 col-sm-12 py-5">
                 <h5 class="card-title fw-bolder" style="color: #262c2cf7">{{ singleRestaurant.restaurant.name  }}</h5>
 
                 <p class="card-text fw-bold mt-3" style="color:#618B35"> {{ singleRestaurant.restaurant.address  }}</p>
@@ -113,4 +113,8 @@ export default {
 </template>
 
 
-<style scoped></style>
+<style scoped>
+
+
+
+</style>
