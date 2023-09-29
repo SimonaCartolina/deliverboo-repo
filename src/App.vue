@@ -2,8 +2,7 @@
 import HeaderApp from "./components/partials/HeaderApp.vue";
 import FooterApp from "./components/partials/FooterApp.vue";
 import restaurantsList from "./components/pages/restaurantsList.vue";
-import ShoppingBag from "./components/ShoppingBag.vue";
-import CarrelloApp from "./components/pages/CarrelloApp.vue";
+import AppPagamenti from "./components/pages/AppPagamenti.vue";
 
 
 export default {
@@ -12,8 +11,7 @@ export default {
     HeaderApp,
     FooterApp,
     restaurantsList,
-    ShoppingBag,
-    CarrelloApp,
+    AppPagamenti,
   },
 
 }
@@ -23,9 +21,9 @@ export default {
 <template>
   <HeaderApp />
 
-<router-view></router-view>
   <main>
-    <ShoppingBag />
+
+    <router-view></router-view>
   </main>
 
   <FooterApp />
