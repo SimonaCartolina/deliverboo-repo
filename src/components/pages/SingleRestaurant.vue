@@ -1,8 +1,11 @@
 <script>
-
+import AppPagamenti from '../pages/AppPagamenti.vue';
 import axios from "axios";
 export default {
     name: "SingleRestaurant",
+    components:{
+        AppPagamenti,
+    },
     data(){
     return{
 
@@ -273,9 +276,11 @@ export default {
 
                             </div>
                         </div>
-                                <button class="btn btn-success py-2 fs-4 mt-3">
-                                    Checkout Now
-                                </button>
+                        <router-link :to="{ name: 'AppPagamenti'}">
+                            <button class="btn btn-success py-2 fs-4 mt-3">
+                                Checkout Now
+                            </button>
+                        </router-link>
                         </div>
                         </div>
             </div>
