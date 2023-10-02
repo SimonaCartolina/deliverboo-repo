@@ -109,7 +109,7 @@
                 li{
                     margin-bottom: 0.25rem;
                     &:hover{
-                    color: #00CCBC;
+                    color: #DE9E4F;
                 }
                 }
                 

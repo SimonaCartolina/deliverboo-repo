@@ -2,7 +2,6 @@
 import HeaderApp from "./components/partials/HeaderApp.vue";
 import FooterApp from "./components/partials/FooterApp.vue";
 import restaurantsList from "./components/pages/restaurantsList.vue";
-import AppPagamenti from "./components/pages/AppPagamenti.vue";
 
 
 export default {
@@ -11,7 +10,6 @@ export default {
     HeaderApp,
     FooterApp,
     restaurantsList,
-    AppPagamenti,
   },
 
 }

@@ -105,18 +105,18 @@ export default {
 
 
                 <div class="container-profile col-lg-3 col-md-3 col-sm-12 py-5">
-                    <h2 class="card-title fw-bolder" style="color: #262c2cf7">{{ singleRestaurant.restaurant.name  }}</h2>
+                    <h2 class="card-title fw-bolder" style="color: #de9e4f">{{ singleRestaurant.restaurant.name  }}</h2>
 
-                    <p class="card-text fw-bold mt-3 fs-3" style="color:#618B35"> {{ singleRestaurant.restaurant.address  }}</p>
+                    <p class="card-text fw-bold mt-3" style="color:rgba(0, 0, 0, 0.749)"> {{ singleRestaurant.restaurant.address  }}</p>
 
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item fw-bold" style="color:#618B35">{{ singleRestaurant.restaurant.opening_time  }}</li>
-                        <li class="list-group-item fw-bold" style="color:#618B35">{{ singleRestaurant.restaurant.category }}</li>
+                        <li class="list-group-item fw-bold" style="color:rgba(0, 0, 0, 0.749)">{{ singleRestaurant.restaurant.opening_time  }}</li>
+                        <li class="list-group-item fw-bold" style="color:rgba(0, 0, 0, 0.749)">{{ singleRestaurant.restaurant.category }}</li>
                     </ul>
                 </div>
     </div>
 
-    <h1 class="fw-bolder text-center" style="color:#00CCBC">
+    <h1 class="fw-bolder text-center" style="color:#de9e4f">
         OUR MENU:
     </h1>
     <div class="menu d-flex flex-wrap col-12">
@@ -134,7 +134,7 @@ export default {
                     <p v-if="plate.visible == 1">Visibile</p>
                     <p v-else>Non visibile</p>
                 </div>
-                <button @click="addToCart(plate)" style="background-color:#00CCBC; border-radius:25px;" class="px-3 py-1">
+                <button @click="addToCart(plate)" style="background-color:#de9e4f; border-radius:25px;" class="px-3 py-1">
                     Acquista
                 </button>
     </div>
@@ -242,12 +242,9 @@ export default {
 
                             </div>
                         </div>
-
-                            <router-link :to="{ name: 'AppPagamenti'}"> 
                                 <button class="btn btn-success py-2 fs-4 mt-3">
                                     Checkout Now
                                 </button>
-                            </router-link>
                         </div>
                         </div>
             </div>
@@ -278,7 +275,7 @@ export default {
         .product-card{
             display: flex;     
             padding: .8rem 0;           
-            border-top: 1px solid #00CCBC;
+            border-top: 1px solid #de9e4f;
             .product-img{
 
                 width: 20%;
@@ -310,7 +307,7 @@ export default {
     }
     .right-size{ 
         .order-summary{
-            border: 1px solid #00CCBC;
+            border: 1px solid #de9e4f;
             background-color: #fff;
             padding: 2rem 1.5rem;
         }
@@ -325,8 +322,8 @@ export default {
             width: 50%;
         }
         .right-promo-button{
-            background-color: #00CCBC;
-            border: 2px solid #00CCBC;
+            background-color: #de9e4f;
+            border: 2px solid #de9e4f;
             color: #fff;
             width: 47%;
             &:hover{
@@ -361,7 +358,7 @@ export default {
     .minus,
     .plus{
         cursor: pointer;
-        color: #00CCBC;
+        color: #de9e4f;
         font-size: 1.2rem;
         font-weight: bolder;
         padding: 2px 10px;

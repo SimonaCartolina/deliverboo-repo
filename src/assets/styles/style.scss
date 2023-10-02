@@ -9,11 +9,18 @@ body {
 
 }
 
-.restaurants img {
-    height: 150px;
-    width: 250px;
+.restaurants {
+    img {
+        height: 150px;
+        width: 250px;
+    }
 
+    .btn:hover {
+        background-color: #e4c8a5;
+
+    }
 }
+
 
 nav {
     flex-wrap: wrap;
@@ -42,7 +49,7 @@ nav {
     }
 
     .nav-buttons:hover {
-        background-color: #67dcd2f7;
+        background-color: #e6c297e7;
         /* Change the background color on hover */
     }
 
