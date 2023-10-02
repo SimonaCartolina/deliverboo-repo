@@ -122,7 +122,6 @@ export default {
     <div class="menu d-flex flex-wrap col-12">
 
     <div v-for="plate in singleRestaurant.restaurant.plates" class=" mx-4 my-4">
-<<<<<<< HEAD
 
                 <div v-if="plate.visible == 1">
 
@@ -135,36 +134,36 @@ export default {
 
 
                     <div class="card-body flex-column px-2">
-                      <h6 style="color:#262c2cf7" class="fw-bolder">{{ plate['name']  }}</h6>
+                        <h6 style="color:#262c2cf7" class="fw-bolder">{{ plate['name']  }}</h6>
 
-                      <p class="card-text mb-1" style="color:#4d7c1be2;"> {{ plate.description }}</p>
-                      <p class="card-text" style="color:rgba(119, 136, 153, 0.793);"> € {{ plate.price  }}</p>
-                      
+                        <p class="card-text mb-1" style="color:#4d7c1be2;"> {{ plate.description }}</p>
+                        <p class="card-text" style="color:rgba(119, 136, 153, 0.793);"> € {{ plate.price  }}</p>
+
                     </div>
                     <button @click="addToCart(plate)" style="background-color:#00CCBC; border-radius:25px;" class="px-3 py-1">
-                      Acquista
+                        Acquista
                     </button>
                 </div>
                 <div v-else>
-                  <div class="filter">
-                    <span>No disponibile</span>
-                      <div style="width: 250px; border:1px solid rgba(221, 218, 218, 0.753)" class="plate-card">
+                    <div class="filter">
+                        <span>No disponibile</span>
+                        <div style="width: 250px; border:1px solid rgba(221, 218, 218, 0.753)" class="plate-card">
 
-                        <img v-if="plate.image.startsWith('http')" :src="plate.image" alt="immagine">
-                        <img v-else :src="'http://127.0.0.1:8000/storage/' + plate.image" alt="immagine">
-                                
-                      </div>
-                      <div class="card-body flex-column px-2">
-                          <h6 style="color:#262c2cf7" class="fw-bolder">{{ plate['name']  }}</h6>
+                            <img v-if="plate.image.startsWith('http')" :src="plate.image" alt="immagine">
+                            <img v-else :src="'http://127.0.0.1:8000/storage/' + plate.image" alt="immagine">
+                                    
+                        </div>
+                        <div class="card-body flex-column px-2">
+                            <h6 style="color:#262c2cf7" class="fw-bolder">{{ plate['name']  }}</h6>
 
-                          <p class="card-text mb-1" style="color:#4d7c1be2;"> {{ plate.description }}</p>
-                          <p class="card-text" style="color:rgba(119, 136, 153, 0.793);"> € {{ plate.price  }}</p>
-                          
-                      </div>
-                      
-                  </div>
+                            <p class="card-text mb-1" style="color:#4d7c1be2;"> {{ plate.description }}</p>
+                            <p class="card-text" style="color:rgba(119, 136, 153, 0.793);"> € {{ plate.price  }}</p>
+                            
+                        </div>
+                        
+                    </div>
                 </div>
-=======
+
                 <div style="width: 250px; border:1px solid rgba(221, 218, 218, 0.753)" class="plate-card">
                     <img v-if="plate.image.startsWith('http')" :src="plate.image" alt="immagine">
                     <img v-else :src="'http://127.0.0.1:8000/storage/' + plate.image" alt="immagine">
@@ -292,7 +291,6 @@ export default {
                         </div>
             </div>
         </div>
->>>>>>> 661a2d8e4d63cccfe80dd41c695549a10094bb51
     </div>
 
   </div>
@@ -302,7 +300,6 @@ export default {
 <style scoped>
 .carrello{
 
-<<<<<<< HEAD
 .filter{
   z-index: 1;
   opacity: 0.2;
@@ -318,7 +315,6 @@ export default {
   }
 }
 
-=======
     .background{
     font-family: "Metrophobic, Sans Serif";
     background-color: #eee;
@@ -448,6 +444,5 @@ export default {
 
 }
 }
->>>>>>> 661a2d8e4d63cccfe80dd41c695549a10094bb51
 
 </style>
