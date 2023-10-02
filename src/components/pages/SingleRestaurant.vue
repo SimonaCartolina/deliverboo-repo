@@ -123,7 +123,9 @@ export default {
 
     <div v-for="plate in singleRestaurant.restaurant.plates" class=" mx-4 my-4">
 
-                <div v-if="plate.visible == 1">
+        <!--INIZIA QUELLO DI LUCA-->
+
+                <div v-if="plate.visible == 1" style="width:250px">
 
                     <div style="width: 250px; border:1px solid rgba(221, 218, 218, 0.753)" class="plate-card">
 
@@ -140,7 +142,7 @@ export default {
                         <p class="card-text" style="color:rgba(119, 136, 153, 0.793);"> € {{ plate.price  }}</p>
 
                     </div>
-                    <button @click="addToCart(plate)" style="background-color:#00CCBC; border-radius:25px;" class="px-3 py-1">
+                    <button @click="addToCart(plate)" style="background-color:#de9e4f; border-radius:25px;" class="px-3 py-1">
                         Acquista
                     </button>
                 </div>
@@ -163,22 +165,9 @@ export default {
                         
                     </div>
                 </div>
+                <!--FINISCE QUELLO DI LUCA-->
 
-                <div style="width: 250px; border:1px solid rgba(221, 218, 218, 0.753)" class="plate-card">
-                    <img v-if="plate.image.startsWith('http')" :src="plate.image" alt="immagine">
-                    <img v-else :src="'http://127.0.0.1:8000/storage/' + plate.image" alt="immagine">
-                </div>
-
-                <div class="card-body flex-column px-2">
-                    <h6 style="color:#262c2cf7" class="fw-bolder">{{ plate['name']  }}</h6>
-                    <p class="card-text mb-1" style="color:#4d7c1be2;"> {{ plate.description }}</p>
-                    <p class="card-text" style="color:rgba(119, 136, 153, 0.793);"> € {{ plate.price  }}</p>
-                    <p v-if="plate.visible == 1">Visibile</p>
-                    <p v-else>Non visibile</p>
-                </div>
-                <button @click="addToCart(plate)" style="background-color:#de9e4f; border-radius:25px;" class="px-3 py-1">
-                    Acquista
-                </button>
+                <!--MIO-->
     </div>
 
     </div>
