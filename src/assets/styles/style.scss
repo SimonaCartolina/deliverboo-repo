@@ -98,3 +98,10 @@ nav {
         padding-bottom: 0.30rem;
     }
 }
+
+@media screen and (max-width: 480px) {
+    #searchBar {
+        width: 200px;
+        margin-left: 0;
+    }
+}

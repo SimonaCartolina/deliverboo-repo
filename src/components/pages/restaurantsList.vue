@@ -51,9 +51,9 @@
 
     <div class="mycontainer col-lg-8 col-md-4 col-sm-10  py-5 restaurants d-flex flex-wrap" style="margin-left:20%;">
 
-        <div class="col-lg-10 col-md-10 col-sm-10 d-flex align-items-center pt-2" style="margin-left:3%;">
+        <div class="col-12 d-flex align-items-center pt-2">
             <div class="input-group">
-                <input v-model="searchBar" @keyup.enter="newSearch(searchBar)" id="searchBar" type="search" class="form-control px-2 py-2" placeholder="Cerca un ristorante per categoria" style="width: 620px; background-color: #F5F5F5; color: #CCCDCD" />
+                <input v-model="searchBar" @keyup.enter="newSearch(searchBar)" id="searchBar" type="search" class="form-control px-2 py-2" placeholder="Cerca un ristorante per categoria" style="background-color: #F5F5F5; color: #CCCDCD" />
             </div>
             <button @click="newSearch(searchBar)" class="py-2">
                 <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
