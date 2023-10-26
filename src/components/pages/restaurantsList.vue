@@ -51,7 +51,7 @@
 
     <div class="mycontainer col-lg-8 col-md-4 col-sm-10  py-5 restaurants d-flex flex-wrap" style="margin-left:20%;">
 
-        <div class="col-12 d-flex align-items-center pt-2">
+        <div class="col-12 d-flex align-items-center pt-2 mt-3">
             <div class="input-group">
                 <input v-model="searchBar" @keyup.enter="newSearch(searchBar)" id="searchBar" type="search" class="form-control px-2 py-2" placeholder="Cerca un ristorante per categoria" style="background-color: #F5F5F5; color: #CCCDCD" />
             </div>

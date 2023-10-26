@@ -17,10 +17,8 @@ export default {
 </script>
 
 <template>
-  <header>
     <HeaderApp />
 
-  </header>
 
   <main>
     <router-view></router-view>
@@ -30,9 +28,8 @@ export default {
 </template>
 
 <style lang="scss">
-header{
-  background-color: aqua
-}
+
+
 @import "./assets/styles/style.scss";
 @import "bootstrap";
 </style>
