@@ -93,8 +93,9 @@ export default {
 </script>
 
 <template>
+    <section style="background-color:#BEE4CF">
 
-    <div class="SingleRestaurant d-flex flex-wrap m-5">
+    <div class="SingleRestaurant d-flex flex-wrap m-5 mt-0 py-5">
 
 
 
@@ -112,17 +113,17 @@ export default {
 
                     <p class="card-text fw-bold mt-3" style="color:rgba(0, 0, 0, 0.749)"> {{ singleRestaurant.restaurant.address  }}</p>
 
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item fw-bold" style="color:rgba(0, 0, 0, 0.749)">{{ singleRestaurant.restaurant.opening_time  }}</li>
-                        <li class="list-group-item fw-bold" style="color:rgba(0, 0, 0, 0.749)">{{ singleRestaurant.restaurant.category }}</li>
+                    <ul>
+                        <li class="list-group-item fw-bold" style="color:rgba(0, 0, 0, 0.749)">Open from: {{ singleRestaurant.restaurant.opening_time  }}</li>
+                        <li class="list-group-item fw-bold" style="color:rgba(0, 0, 0, 0.749)">Category: {{ singleRestaurant.restaurant.category }}</li>
                     </ul>
                 </div>
     </div>
 
-    <h1 class="fw-bolder text-center" style="color:#de9e4f">
+    <h1 class="fw-bolder text-center py-5 my-5" style="color:#de9e4f">
         OUR MENU:
     </h1>
-    <div class="menu d-flex flex-wrap col-12">
+    <div class="menu d-flex flex-wrap col-12 py-5">
 
     <div v-for="plate in singleRestaurant.restaurant.plates" class=" mx-4 my-4">
 
@@ -174,6 +175,7 @@ export default {
     </div>
 
     </div>
+</section>
 
 
     <div class="carrello my-5 py-5">

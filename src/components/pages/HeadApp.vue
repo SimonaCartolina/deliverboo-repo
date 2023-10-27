@@ -25,7 +25,7 @@ export default {
                         <span class="logo">DELIVERBOO</span> Food Web App is here to help you navigate through the maze of international cuisine in Milan.
                         </p>
                     <p class="pt-4" style="text-align:center; color:black;">
-                    STRAIGHT TO YOUR HOME
+                    STRAIGHT TO THE BOTTOM
                     
                     </p>
                     <p style="text-align:center; cursor:pointer">
