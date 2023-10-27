@@ -60,6 +60,7 @@ export default {
 <style scoped>
 .nav{
   position:fixed;
+  z-index:1;
   background-color: #d3fde6;
   
 }

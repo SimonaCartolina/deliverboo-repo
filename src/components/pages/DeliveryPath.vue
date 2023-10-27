@@ -11,4 +11,11 @@ export default{
 </template>
 
 <style scoped>
+.image-container{
+    width:100%;
+}
+img{
+    width:100%;
+}
+
 </style>

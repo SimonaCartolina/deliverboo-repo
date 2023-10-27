@@ -69,7 +69,7 @@
     <div v-for="restaurant in restaurantsList" :key="restaurant.id" class=" mx-4 my-5">
 
 
-        <div style="width: 250px; border:0.50px solid rgb(221, 218, 218)" class="pb-2">
+        <div style="width: 250px; border:0.50px solid rgb(221, 218, 218)" class="singlecard pb-2">
 
             <img v-if="restaurant.image.startsWith('http')" :src="restaurant.image" alt="immagine">
             <img v-else :src="'http://127.0.0.1:8000/storage/' + restaurant.image" alt="immagine">
@@ -98,6 +98,11 @@
     button:hover{
         background-color: #e5c6a1;
 
+    }
+    
+    .singlecard:hover {
+        transform: scale(1.2);
+        transition: 1s ease-in-out;
     }
 
 
