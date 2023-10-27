@@ -48,6 +48,9 @@
     
     
 <template>
+<section style="background-color: #BEE4CF;">
+
+
 
     <div class="mycontainer col-lg-8 col-md-4 col-sm-10  py-5 restaurants d-flex flex-wrap" style="margin-left:20%;">
 
@@ -87,6 +90,7 @@
         </div>
     </div>
     </div>
+</section>
 </template>
 
     <style scoped>

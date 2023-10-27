@@ -4,7 +4,6 @@ import FooterApp from "./components/partials/FooterApp.vue";
 import restaurantsList from "./components/pages/restaurantsList.vue";
 import DeliveryPath from "./components/pages/DeliveryPath.vue";
 
-
 export default {
   name: "App",
   components: {
@@ -13,14 +12,18 @@ export default {
     restaurantsList,
     DeliveryPath,
   },
+    
 
 }
 
 </script>
 
 <template>
-    <HeaderApp/>
+  <HeaderApp/>
   <main>
+    <div id="myElement">
+      
+    </div>
     <router-view></router-view>
   </main>
 
