@@ -6,6 +6,7 @@ import SingleRestaurant from './components/pages/SingleRestaurant.vue';
 import AppPagamenti from './components/pages/AppPagamenti.vue';
 import HeaderApp from './components/partials/HeaderApp.vue';
 import AboutUs from './components/pages/AboutUs.vue';
+import HeadApp from './components/pages/HeadApp.vue';
 
 
 const router = createRouter({
@@ -15,6 +16,11 @@ const router = createRouter({
             path: '/',
             name: 'restaurantsList',
             component: restaurantsList,
+        },
+        {
+            path: '/',
+            name: 'HeadApp',
+            component: HeadApp,
         },
         {
             path: '/SingleRestaurant/:id',
