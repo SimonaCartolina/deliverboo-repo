@@ -101,7 +101,7 @@
     }
     
     .singlecard:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
         transition: 1s ease-in-out;
     }
 

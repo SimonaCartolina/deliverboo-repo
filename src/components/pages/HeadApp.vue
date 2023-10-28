@@ -61,7 +61,7 @@ export default {
     height:100%;
     object-fit: cover;
     position: relative;
-  animation: moveLeft 5s linear infinite; 
+  animation: moveLeft 3s ease-out; 
 
   }
 }

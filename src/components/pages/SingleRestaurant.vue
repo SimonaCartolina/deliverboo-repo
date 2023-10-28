@@ -104,11 +104,31 @@ export default {
             // Annulla l'eliminazione
             this.itemToDelete = null; // Resetta la variabile
             },
-            
+
+
+            saveCartToLocalStorage() {
+            localStorage.setItem('cart', JSON.stringify(this.cart));
+            },
+
+
+            loadCartFromLocalStorage() {
+            const savedCart = localStorage.getItem('cart');
+            if (savedCart) {
+                this.cart = JSON.parse(savedCart);
+            }
+            },
+
+
+            initializeLocalStorage() {
+            if (!localStorage.getItem('cart')) {
+                this.saveCartToLocalStorage(); // Salva il carrello vuoto iniziale
+            }
+            },
         },
-        
         created() {
             this.getSingleRestaurant();
+            this.initializeLocalStorage(); // Inizializza solo se il localStorage è vuoto
+            this.loadCartFromLocalStorage();
         }
 
 };
