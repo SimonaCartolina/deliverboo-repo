@@ -71,10 +71,10 @@ export default {
         },
 
 
-
         increaseQuantity(plate) {
             plate.quantity++;
         },
+
 
         decreaseQuantity(plate) {
             if (plate.quantity > 1) {
@@ -82,16 +82,24 @@ export default {
             }
             },
 
+
             setDeleteItem(plate) {
-            // Imposta l'elemento da eliminare
-            this.itemToDelete = plate;
-            },
+                if (plate.quantity === 1) {
+                    // Imposta l'elemento da eliminare solo se la quantità è 1
+                    this.itemToDelete = plate;
+                }
+                },
+
 
             confirmDelete() {
-            // Elimina l'elemento selezionato
-            this.removeFromCart(this.itemToDelete);
-            this.itemToDelete = null; // Resetta la variabile
-            },
+                if (this.itemToDelete) {
+                    // Elimina l'elemento solo se esiste
+                    this.removeFromCart(this.itemToDelete);
+                    this.itemToDelete = null; // Resetta la variabile
+                }
+                },
+
+
             cancelDelete() {
             // Annulla l'eliminazione
             this.itemToDelete = null; // Resetta la variabile
