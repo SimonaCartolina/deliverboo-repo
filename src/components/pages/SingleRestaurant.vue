@@ -163,7 +163,7 @@ export default {
 
 
                 <div class="container-profile col-lg-3 col-md-3 col-sm-12 py-5">
-                    <h2 class="card-title fw-bolder" style="color: #de9e4f">{{ singleRestaurant.restaurant.name  }}</h2>
+                    <h2 class="card-title fw-bolder" style="color: #00C2B3">{{ singleRestaurant.restaurant.name  }}</h2>
 
                     <p class="card-text fw-bold mt-3" style="color:rgba(0, 0, 0, 0.749)"> {{ singleRestaurant.restaurant.address  }}</p>
 
@@ -174,7 +174,7 @@ export default {
                 </div>
     </div>
 
-    <h1 class="fw-bolder text-center py-5 my-5" style="color:#de9e4f">
+    <h1 class="fw-bolder text-center py-5 my-5" style="color:#00C2B3">
         OUR MENU:
     </h1>
     <div class="menu d-flex flex-wrap col-12 py-5">
@@ -200,7 +200,7 @@ export default {
                         <p class="card-text" style="color:rgba(119, 136, 153, 0.793);"> € {{ plate.price  }}</p>
 
                     </div>
-                    <button @click="addToCart(plate)" style="background-color:#de9e4f; border-radius:25px;" class="px-3 py-1">
+                    <button @click="addToCart(plate)" style="background-color:#00C2B3; border-radius:25px;" class="px-3 py-1">
                         Acquista
                     </button>
                 </div>

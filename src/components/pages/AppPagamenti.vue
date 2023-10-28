@@ -33,7 +33,7 @@ template{
     position:relative;
 }
 button{
-    border: 2px solid #de9e4f;
+    border: 2px solid #00BAAB;
     border-radius:25px;
     margin:0 auto;
     position:absolute;
