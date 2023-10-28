@@ -50,36 +50,42 @@ export default {
     },
 
     addToCart(plate) {
-    const existingItem = this.cart.find((item) => item.plate.id === plate.id)
-
-    ;
+    const existingItem = this.cart.find((item) => item.plate.id === plate.id);
     if (existingItem) {
             existingItem.quantity++;
-              console.log(existingItem); // Aumenta la quantità se il piatto è già nel carrello
+              console.log(existingItem);
+              this.saveCartToLocalStorage(); // Aumenta la quantità se il piatto è già nel carrello
     } else {
             this.cart.push({ plate, quantity: 1 });
-              console.log(plate) // Aggiungi il piatto al carrello
+              console.log(plate);
+              this.saveCartToLocalStorage(); // Aggiungi il piatto al carrello
     }
     },
                         
         removeFromCart(plate) {
         const index = this.cart.findIndex(item => item.plate.id === plate.plate.id);
 
+
         if (index !== -1) {
-          this.cart.splice(index, 1); // Remove the plate from the cart
+        this.cart.splice(index, 1);
+          this.saveCartToLocalStorage(); // Remove the plate from the cart
         }
+        this.saveCartToLocalStorage();
         },
 
 
         increaseQuantity(plate) {
             plate.quantity++;
+            this.saveCartToLocalStorage();
         },
 
 
         decreaseQuantity(plate) {
             if (plate.quantity > 1) {
                 plate.quantity--;
+                this.saveCartToLocalStorage();
             }
+            this.saveCartToLocalStorage();
             },
 
 
@@ -87,7 +93,9 @@ export default {
                 if (plate.quantity === 1) {
                     // Imposta l'elemento da eliminare solo se la quantità è 1
                     this.itemToDelete = plate;
+                    this.saveCartToLocalStorage();
                 }
+                this.saveCartToLocalStorage();
                 },
 
 
@@ -95,14 +103,16 @@ export default {
                 if (this.itemToDelete) {
                     // Elimina l'elemento solo se esiste
                     this.removeFromCart(this.itemToDelete);
-                    this.itemToDelete = null; // Resetta la variabile
+                    this.itemToDelete = null;
+                    this.saveCartToLocalStorage(); // Resetta la variabile
                 }
                 },
 
 
             cancelDelete() {
             // Annulla l'eliminazione
-            this.itemToDelete = null; // Resetta la variabile
+            this.itemToDelete = null;
+            this.saveCartToLocalStorage(); // Resetta la variabile
             },
 
 
