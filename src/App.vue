@@ -12,24 +12,22 @@ export default {
     restaurantsList,
     DeliveryPath,
   },
-    
-
 }
 
 </script>
 
 <template>
-  <HeaderApp/>
-  <main>
-    <div id="myElement">
-      
-    </div>
-    <router-view></router-view>
-  </main>
-
-  <DeliveryPath/>
-  <FooterApp />
+    <HeaderApp/>
+  
+    <main>
+      <router-view></router-view>
+    </main>
+    
+    <DeliveryPath/>
+    
+    <FooterApp />
 </template>
+
 
 <style lang="scss">
 @import "./assets/styles/style.scss";

@@ -13,9 +13,11 @@ export default{
 <style scoped>
 .image-container{
     width:100%;
+
 }
 img{
     width:100%;
+    display:block;
 }
 
 </style>

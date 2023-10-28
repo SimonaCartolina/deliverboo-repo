@@ -14,6 +14,7 @@ export default {
         restaurantMenu: [],
         apiUrl:"",
         tip: 0,
+        itemToDelete: null,
     }
     },
 
@@ -79,6 +80,21 @@ export default {
             if (plate.quantity > 1) {
                 plate.quantity--;
             }
+            },
+
+            setDeleteItem(plate) {
+            // Imposta l'elemento da eliminare
+            this.itemToDelete = plate;
+            },
+
+            confirmDelete() {
+            // Elimina l'elemento selezionato
+            this.removeFromCart(this.itemToDelete);
+            this.itemToDelete = null; // Resetta la variabile
+            },
+            cancelDelete() {
+            // Annulla l'eliminazione
+            this.itemToDelete = null; // Resetta la variabile
             },
             
         },
@@ -218,13 +234,19 @@ export default {
                                 <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg>
                             
                             </button>
-                            <button @click="removeFromCart(plate)" class="mx-2 my-1 bracco">
-                                <svg xmlns="http://www.w3.org/2000/svg" style="fill:red" height="1em" viewBox="0 0 448 512"><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"/></svg>
+                            <button @click="setDeleteItem(plate)" class="mx-2 my-1 bracco">
+                                -
                             </button>
 
                         </div>
-                        
 
+                    </div>
+                    <div v-if="itemToDelete">
+                        <div>
+                            Delete item?
+                        </div>
+                        <button @click="confirmDelete">Sì</button>
+                        <button @click="cancelDelete">No</button>
                     </div>
                 </div>
 

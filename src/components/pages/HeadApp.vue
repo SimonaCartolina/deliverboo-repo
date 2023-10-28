@@ -60,7 +60,17 @@ export default {
     width:100%;
     height:100%;
     object-fit: cover;
+    position: relative;
+  animation: moveLeft 5s linear infinite; 
 
+  }
+}
+@keyframes moveLeft {
+  0% {
+    transform: translateX(100%); /* Posizione iniziale a destra */
+  }
+  100% {
+    transform: translateX(-100%); /* Posizione finale a sinistra */
   }
 }
 .head-content{
