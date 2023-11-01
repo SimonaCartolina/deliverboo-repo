@@ -53,11 +53,11 @@ export default {
     const existingItem = this.cart.find((item) => item.plate.id === plate.id);
     if (existingItem) {
             existingItem.quantity++;
-              console.log(existingItem);
+            console.log(existingItem);
               this.saveCartToLocalStorage(); // Aumenta la quantità se il piatto è già nel carrello
     } else {
             this.cart.push({ plate, quantity: 1 });
-              console.log(plate);
+            console.log(plate);
               this.saveCartToLocalStorage(); // Aggiungi il piatto al carrello
     }
     },
@@ -147,34 +147,42 @@ export default {
 </script>
 
 <template>
-    <section style="background-color:#BEE4CF">
+    <section style="background-color:#FFFFFF; margin-top:5rem;">
 
-    <div class="SingleRestaurant d-flex flex-wrap m-5 mt-0 py-5">
+    <div class="SingleRestaurant d-flex flex-wrap m-5 mt-5 py-5">
 
 
 
-                <div class="immagine-profile col-lg-6 col-md-6 col-sm-12">
+                <div class="immagine-profile col-lg-4 col-md-6 col-sm-12">
 
-                <img v-if="singleRestaurant.restaurant.image.startsWith('http')" :src="singleRestaurant.restaurant.image" alt="immagine">
+                    <img v-if="singleRestaurant.restaurant.image.startsWith('http')" :src="singleRestaurant.restaurant.image" alt="immagine">
                     <img v-else :src="'http://127.0.0.1:8000/storage/' + singleRestaurant.restaurant.image" alt="immagine">
                     <!-- <img :src="singleRestaurant.restaurant.image" :alt="singleRestaurant.restaurant.id"> -->
 
                 </div>
 
 
-                <div class="container-profile col-lg-3 col-md-3 col-sm-12 py-5">
-                    <h2 class="card-title fw-bolder" style="color: #00C2B3">{{ singleRestaurant.restaurant.name  }}</h2>
+                <div class="container-profile col-lg-5 col-md-3 col-sm-12">
+                    <h1 class="card-title fw-bolder mb-2" style="color: #00C2B3">{{ singleRestaurant.restaurant.name  }}</h1>
 
-                    <p class="card-text fw-bold mt-3" style="color:rgba(0, 0, 0, 0.749)"> {{ singleRestaurant.restaurant.address  }}</p>
-
+                    
                     <ul>
-                        <li class="list-group-item fw-bold" style="color:rgba(0, 0, 0, 0.749)">Open from: {{ singleRestaurant.restaurant.opening_time  }}</li>
-                        <li class="list-group-item fw-bold" style="color:rgba(0, 0, 0, 0.749)">Category: {{ singleRestaurant.restaurant.category }}</li>
+                        <li class="list-group d-flex" style="color:rgba(0, 0, 0, 0.749)">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                                </svg>
+                                Find us on {{ singleRestaurant.restaurant.address  }}</span></li>
+                        <li class="list-group-item" style="color:rgba(0, 0, 0, 0.749)">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
+                            Open from: {{ singleRestaurant.restaurant.opening_time  }}</li>
+                        <li class="list-group-item" style="color:rgba(0, 0, 0, 0.749)">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M159.7 237.4C108.4 308.3 43.1 348.2 14 326.6-15.2 304.9 2.8 230 54.2 159.1c51.3-70.9 116.6-110.8 145.7-89.2 29.1 21.6 11.1 96.6-40.2 167.5zm351.2-57.3C437.1 303.5 319 367.8 246.4 323.7c-25-15.2-41.3-41.2-49-73.8-33.6 64.8-92.8 113.8-164.1 133.2 49.8 59.3 124.1 96.9 207 96.9 150 0 271.6-123.1 271.6-274.9.1-8.5-.3-16.8-1-25z"/></svg>
+                            Category: {{ singleRestaurant.restaurant.category }}</li>
                     </ul>
                 </div>
     </div>
 
-    <h1 class="fw-bolder text-center py-5 my-5" style="color:#00C2B3">
+    <h1 class="fw-bolder text-center pt-5 mt-5" style="color:#00C2B3">
         OUR MENU:
     </h1>
     <div class="menu d-flex flex-wrap col-12 py-5">
@@ -183,9 +191,9 @@ export default {
 
         <!--INIZIA QUELLO DI LUCA-->
 
-                <div v-if="plate.visible == 1" style="width:250px">
+                <div v-if="plate.visible == 1" style="width:150px; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;" class="pb-3 align-items-center">
 
-                    <div style="width: 250px; border:1px solid rgba(221, 218, 218, 0.753)" class="plate-card">
+                    <div style="width: 150px; border:1px solid rgba(221, 218, 218, 0.753)" class="plate-card">
 
                     <img v-if="plate.image.startsWith('http')" :src="plate.image" alt="immagine">
                     <img v-else :src="'http://127.0.0.1:8000/storage/' + plate.image" alt="immagine">
@@ -193,15 +201,15 @@ export default {
                     </div>
 
 
-                    <div class="card-body flex-column px-2">
+                    <div class="card-body flex-column px-3">
                         <h6 style="color:#262c2cf7" class="fw-bolder">{{ plate['name']  }}</h6>
-
-                        <p class="card-text mb-1" style="color:#4d7c1be2;"> {{ plate.description }}</p>
                         <p class="card-text" style="color:rgba(119, 136, 153, 0.793);"> € {{ plate.price  }}</p>
 
                     </div>
-                    <button @click="addToCart(plate)" style="background-color:#00C2B3; border-radius:25px;" class="px-3 py-1">
-                        Acquista
+                    <button @click="addToCart(plate)" style="background-color:#00C2B3; border-radius:30px; height:2rem; width:2rem; border-radius:50%;" class="mx-2 m-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="0.90em" viewBox="0 0 448 512">
+                            <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/>
+                        </svg>
                     </button>
                 </div>
                 <div v-else>
@@ -349,26 +357,30 @@ export default {
         </div>
     </div>
 
-  </div>
+    </div>
 </template>
 
 
 <style scoped>
+
+.immagine-profile{
+    height:250px;
+}
 .carrello{
 
 .filter{
-  z-index: 1;
-  opacity: 0.2;
-  color: black;
-  position: relative;
-  & span{
-    font-size: 1.2rem;
-    position: absolute;
-    font-weight: bolder;
-    z-index: 2;
-    left: 30%;
+    z-index: 1;
+    opacity: 0.2;
+    color: black;
+    position: relative;
+    & span{
+        font-size: 1.2rem;
+        position: absolute;
+        font-weight: bolder;
+        z-index: 2;
+        left: 30%;
 
-  }
+    }
 }
 
     .background{
