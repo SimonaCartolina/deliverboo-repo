@@ -52,7 +52,7 @@
 
 
 
-    <div class="mycontainer col-lg-8 col-md-4 col-sm-10  py-5 restaurants d-flex flex-wrap" style="margin-left:20%;">
+    <div class="mycontainer col-lg-12 col-md-4 col-sm-10  py-5 restaurants d-flex flex-wrap">
 
         <div class="col-12 d-flex align-items-center pt-2 mt-3">
             <div class="input-group search-bar">
@@ -61,18 +61,18 @@
         </div>
 
 
-    <div v-for="restaurant in restaurantsList" :key="restaurant.id" class=" mx-4 my-5">
+    <div v-for="restaurant in restaurantsList" :key="restaurant.id" class=" mx-4 my-5 align-items-center">
 
 
-        <div style="width: 250px; border:0.50px solid rgb(221, 218, 218)" class="singlecard pb-2">
+        <div style="width: 250px; border:0.50px solid rgb(221, 218, 218); border-radius:25px; align-items: center;" class="singlecard pb-2">
 
-            <img v-if="restaurant.image.startsWith('http')" :src="restaurant.image" alt="immagine">
-            <img v-else :src="'http://127.0.0.1:8000/storage/' + restaurant.image" alt="immagine">
+            <img v-if="restaurant.image.startsWith('http')" :src="restaurant.image" alt="immagine" style="border-radius:25px 25px 0 0;">
+            <img v-else :src="'http://127.0.0.1:8000/storage/' + restaurant.image" alt="immagine" style="border-radius:25px 25px 0 0;">
 
-        <div class="card-body flex-column px-2 mb-2">
+        <div class="card-body flex-column mx-4 mb-2 mt-2">
             <h6 style="color:#262c2cf7" class="fw-bolder"> {{ restaurant.name }} </h6>
             <p class="card-text mb-1" style="color:#4d7c1be2;">{{ restaurant.address }}</p>
-            <p class="card-text" style="color:rgba(119, 136, 153, 0.793);">{{ restaurant.opening_time }}</p>
+            <span class="card-text" style="color:rgba(119, 136, 153, 0.793);">{{ restaurant.opening_time }}</span>
             <p class="card-text" style="color:rgba(11, 12, 12, 0.722);">{{ restaurant.category }}</p>
         </div>
 
@@ -80,7 +80,7 @@
 
         <router-link :to="{ name: 'SingleRestaurant' , params: { id: restaurant.id }}" style="color:black; text-decoration:none;"
                 class="px-2"> 
-                <button type="button" style="color:#00C2B3; border:1px solid #00C2B3" class="btn">Vedi dettagli</button>
+                <button type="button" style="color:#00C2B3; border:1px solid #00C2B3" class="btn mx-3">see more</button>
         </router-link>
         </div>
     </div>
@@ -239,6 +239,9 @@ input {
         background-color: #9fd7d3;
 
     }
+	.singlecard{
+		box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	}
     
     .singlecard:hover {
         transform: scale(1.1);

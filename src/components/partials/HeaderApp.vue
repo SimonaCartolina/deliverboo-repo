@@ -27,32 +27,31 @@ export default {
 
           
           <ul class="d-flex align-items-center">
-              <li>
-                  <router-link :to="{name: 'restaurantsList' }">
-                    <span style="color:#00C2B3" class="fw-bolder">Home</span>
-                  </router-link>
-              </li>
-              <li>
-                <router-link :to="{name: 'AboutUs' }">
-                  <span style="color:#00C2B3" class="fw-bolder">About Us</span>
-                </router-link>
-              </li>
+            
+                    <li>
+                        <router-link :to="{name: 'restaurantsList' }">
+                          <span style="color:#00C2B3" class="fw-bolder">Home</span>
+                        </router-link>
+                    </li>
+
                     <li>
                       <a href="http://127.0.0.1:8000/login">
                           <span style="color:#00C2B3" class="fw-bolder">Login</span>
                       </a>
                     </li>
+
                     <li>
                       <a href="http://127.0.0.1:8000/register">
                           <span style="color:#00C2B3" class="fw-bolder">Registrati</span>
                       </a>
                     </li>
+
                 </ul>  
 
           </div>
 
-          <HeadApp />
-          
+          <HeadApp/>
+
 
     </header>
 </template>
